@@ -30,7 +30,7 @@
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
 
 <!-- Bootstrap readable theme -->
-<link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
+<%-- <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet"> --%>
 
 <!-- Custom styles for this template -->
 <link href="${css}/myapp.css" rel="stylesheet">
@@ -60,6 +60,12 @@
 			<c:if test="${userClickAbout == true}">
 				<%@include file="about.jsp"%>
 			</c:if>
+			
+			<!-- Loading the product list content -->
+			<c:if test="${userClickAllProducts == true or userClickCategoryProducts == true}">
+				<%@include file="listProducts.jsp"%>
+			</c:if>
+			
 
 		</div>
 		
