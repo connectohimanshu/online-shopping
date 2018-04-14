@@ -22,18 +22,19 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 public class HibernateConfig {
 
 	//changes the below based on database used	
-//	private final static String  DATABASE_URL = "jdbc:mysql://inpits.c0xkfiq0rfxf.ap-south-1.rds.amazonaws.com:3306/SpringMvcTutorial";
-//	private final static String  DATABASE_DRIVER = "com.mysql.jdbc.Driver";
-//	private final static String  DATABASE_DIALECT = "org.hibernate.dialect.MySQLDialect";
-//	private final static String  DATABASE_USERNAME = "inpits";
-//	private final static String  DATABASE_PASSWORD = "inpits123";
-//	
+	private final static String  DATABASE_URL = "jdbc:mysql://inpits.c0xkfiq0rfxf.ap-south-1.rds.amazonaws.com:3306/SpringMvcTutorial";
+	private final static String  DATABASE_DRIVER = "com.mysql.jdbc.Driver";
+//	private final static String  DATABASE_DRIVER = "com.mysql.cj.jdbc.Driver";
+	private final static String  DATABASE_DIALECT = "org.hibernate.dialect.MySQLDialect";
+	private final static String  DATABASE_USERNAME = "inpits";
+	private final static String  DATABASE_PASSWORD = "inpits123";
 	
-	private final static String  DATABASE_URL = "jdbc:h2:tcp://localhost/~/onlineshopping";
-	private final static String  DATABASE_DRIVER = "org.h2.Driver";
-	private final static String  DATABASE_DIALECT = "org.hibernate.dialect.H2Dialect";
-	private final static String  DATABASE_USERNAME = "sa";
-	private final static String  DATABASE_PASSWORD = "";
+	
+//	private final static String  DATABASE_URL = "jdbc:h2:tcp://localhost/~/onlineshopping";
+//	private final static String  DATABASE_DRIVER = "org.h2.Driver";
+//	private final static String  DATABASE_DIALECT = "org.hibernate.dialect.H2Dialect";
+//	private final static String  DATABASE_USERNAME = "sa";
+//	private final static String  DATABASE_PASSWORD = "";
 	
 	//initialising datasource bean
 	@Bean

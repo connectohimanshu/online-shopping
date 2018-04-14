@@ -1,10 +1,10 @@
 package net.kzm.shoppingbackend.daoimpl;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 import org.hibernate.SessionFactory;
-import org.hibernate.query.Query;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,21 +21,12 @@ public class CategoryDAOImpl implements CategoryDAO {
 	@Autowired
 	private SessionFactory sessionFactory;
 	
-	
-	
-	private static List<Category> categories = new ArrayList<>();
-	
-	
 	@Override
 	public List<Category> list() {
 		// TODO Auto-generated method stub
 		
 		String selectActiveCategory = "FROM Category WHERE active = :active";
-		
-		Query query = sessionFactory.getCurrentSession().createQuery(selectActiveCategory);
-		query.setParameter("active", true);
-	
-		return query.getResultList();
+		return sessionFactory.getCurrentSession().createQuery(selectActiveCategory,Category.class).setParameter("active", true).getResultList();
 	}
 
 	//getting single category based on id
