@@ -20,13 +20,6 @@
 
 		<!-- Link backend project -->
 
-		<dependency>
-			<groupId>net.kzm</groupId>
-			<artifactId>shoppingbackend</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-
-		</dependency>
-
 		<!-- JUNIT DEPENDENCY -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -36,7 +29,12 @@
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/javax/javaee-api -->
-		<dependency>
+	 <dependency>
+	  <groupId>${project.groupId}</groupId>
+	  <artifactId>shoppingbackend</artifactId>
+	  <version>${project.version}</version>
+	 </dependency>
+	 <dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-api</artifactId>
 			<version>${javaee.version}</version>
